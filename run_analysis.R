@@ -23,7 +23,7 @@ Y_total <- rbind(train_data_Y, test_data_Y)
 total_sub <- rbind(train_data_sub, test_data_sub)
 
 ## Call 2: Extracting only the measurements on the mean and standard deviation for each measurement. 
-varnames_sel <- varnames[grep("mean\\(\\)|std\\(\\)",varnames[,2]),]
+varnames_sel <- varnames[grep("mean|std",varnames[,2]),]
 X_total <- X_total[,varnames_sel[,1]]
 View(X_total)
 
